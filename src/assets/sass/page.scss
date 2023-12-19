@@ -1,0 +1,64 @@
+
+  .page {
+    line-height: 1.5;
+    margin:0;
+    padding: 0;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+
+    &--space {
+      background-color: var(--darker-blue);
+      background-image: url('/src/assets/images/space.png');
+    }
+
+    &__heading {
+      font-size: 3.5rem;
+      line-height: 3.6rem;
+      text-align: left;
+      margin: 2% 2% 2% 5%;
+
+      @include respond-large { 
+        text-align: center;
+        font-size: 5rem;
+        margin: 0;
+        padding: 2%;
+      }
+
+      &--gold {
+        color: var(--gold);
+        font-family: "Star-Killer-Outline";
+      }
+    }
+  
+    &__sub-heading {
+      font-size: 1.3rem;
+      text-align: left;
+      margin-left: 5%;
+
+      @include respond-large { 
+        font-size: 2rem;
+        text-align: center;
+        margin: 0;
+      }
+
+      &--lavendar {
+        font-family: "Star-Killer";
+        color: var(--lavendar);
+      }
+    }
+
+    &__container {
+      margin : 0;
+      padding: 0 2% 2% 2%;
+      display: grid;
+      justify-content: space-around;
+      grid-template-columns: minmax(0, 1fr);
+      position: relative;
+
+      @include respond-medium {  
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      }
+    }
+
+}

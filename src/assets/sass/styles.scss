@@ -1,0 +1,114 @@
+  :root {
+    --coconut: rgb(235,236,247);
+    --silver: rgb(235,236,245);
+    --lavendar: rgb(174,177,215);
+    --violet: rgb(113,119,186);
+    --mid-blue:  rgb(52,60,156);
+    --dark-blue: rgb(36,42,109);
+    --darker-blue: rgb(26,30,78);
+    --night: rgb(8,8,24);
+    --cream: rgb(253,248,237);
+    --noodles: rgb(249,227,182);
+    --straw: rgb(244,206,127);
+    --gold: rgb(239,185,72);
+    --fire: rgb(244, 132, 40);
+  }
+
+/* Font: Star Wars Kit[Font]
+"https://www.fontspace.com/star-wars-kit-font-f33062"
+Accessed 29/11/23 */
+  @font-face {
+    font-family: "Star-Wars-Kit";
+    src: url("/src/assets/fonts/StarwarsKit.ttf");
+  }
+  
+    /* Font: D Poly Imperial[Font]
+  "https://www.fontspace.com/dpoly-imperial-font-f218702"
+  Accessed 29/11/23 */
+  @font-face {
+      font-family: "D-Poly";
+      src: url("/src/assets/fonts/DpolyImperial.ttf");
+    }
+      /* Font: Mandalorian[Font]
+  "https://www.fontspace.com/mandalorian-font-f14708"
+  Accessed 29/11/23 */
+  @font-face {
+      font-family: "Mandalorian";
+      src: url("/src/assets/fonts/Mandalorian.ttf");
+    }
+        /* Font: Galactic Basic[Font]
+  "https://www.dafont.com/galactic-basic.font"
+  Accessed 30/11/23 */
+  @font-face {
+    font-family: "Galactic-Basic";
+    src: url("/src/assets/fonts/galbasic.ttf");
+  }
+        /* Font: Star Killer[Font]
+  "https://www.fontspace.com/starkiller-font-f35874"
+  Accessed 29/11/23 */
+  @font-face {
+      font-family: "Star-Killer";
+      src: url("/src/assets/fonts/Starkiller.ttf");
+  }
+  @font-face {
+      font-family: "Star-Killer-Outline";
+      src: url("/src/assets/fonts/StarkillerOutline.ttf");
+  }
+  @font-face {
+    font-family: "Star-Killer-Italic";
+    src: url("/src/assets/fonts/StarkillerItalic.ttf");
+  }
+  @font-face {
+    font-family: "Star-Killer--Outline-Italic";
+    src: url("/src/assets/fonts/StarkillerOutlineItalic.ttf");
+  }
+
+  @mixin respond-medium {
+    @media (min-width: 768px) { @content };
+  }
+
+  @mixin respond-large {
+    @media (min-width: 992px) { @content };
+  }
+
+  @mixin gold-shadow {
+    border: 1px solid var(--gold);
+    box-shadow: 5px 5px 8px var(--mid-blue), 10px 10px 8px var(--lavendar), 15px 15px 8px var(--gold);
+    border-radius: 15%;
+  }
+
+  @mixin darker-blue {
+    background-color: var(--darker-blue);
+    color: var(--coconut);
+  }
+
+  @mixin gold {
+    background: var(--gold);
+    color: var(--darker-blue);
+  }
+
+  @mixin coconut {
+    background: var(--coconut);
+    color: var(--darker-blue);
+  }
+
+  @mixin night {
+    background: var(--night);
+    color: var(--gold);
+  }
+
+  %card-content {
+    position: relative;
+    margin: 3% auto;
+    padding: 1%;
+    width: 100%;
+    height: max-content;
+    text-align: center;
+    cursor: pointer;
+
+    @include respond-large { 
+      margin: 2% auto;
+      width: 80%;
+    }
+  }
+

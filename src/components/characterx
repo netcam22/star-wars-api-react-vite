@@ -1,0 +1,40 @@
+/*
+import {http} from 'msw';
+import {setupServer} from 'msw/node';
+import {render, fireEvent, screen} from '@testing-library/react';
+import '@testing-library/jest-dom';
+// the component to test
+import useFetch from '../hooks/use_fetch';
+import {Character, CharacterProps} from './character';
+
+const server = setupServer(
+ /
+  http.get('https://swapi.dev/api/people/1', () => {
+    return new Response(JSON.stringify({
+      "name": "Luke Skywalker",
+      "height": "172",
+      "eye_color": "blue",
+      "birth_year": "19BBY"}
+      ), {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+  }
+  ))
+  
+  beforeAll(() => server.listen())
+  afterEach(() => server.resetHandlers())
+  afterAll(() => server.close())
+
+  const requiredProps = {
+    endPoint: "https://swapi.dev/api/people/1",
+    image: "./assets/images/luke.jpeg"
+  }
+
+  test('renders Luke Skywalker on page', async () => {
+    render(<Character {...requiredProps}/>);
+    const characterElement = await screen.findByText(/Luke Skywalker/i);
+    expect(characterElement).toBeInTheDocument();
+  });
+  */

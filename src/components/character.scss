@@ -1,0 +1,137 @@
+  .card {
+    position: relative;
+    width: 94%;
+    margin: 7% 3%;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include respond-large { 
+      &:nth-child(1) {
+          rotate: -4deg;
+        }
+        &:nth-child(2) {
+          rotate: 4deg;
+        }
+        &:nth-child(3) {
+          rotate: 4deg;
+        }
+        &:nth-child(4) {
+          rotate: -4deg;
+        }
+    }
+    &--planet{
+      background-image: url("./../assets/images/planet.png");
+      font-family: "Galactic-Basic";
+    }
+
+    &--planet:hover{
+      font-family: "Star-Killer";;
+    }
+
+    &__image {
+      margin: 3% auto;
+      border: 5px solid;
+      border-radius: 15%;
+      width: 100%;
+
+      @include respond-large { 
+        display: block;
+        width: 80%;
+      }
+
+      &-darker--blue {
+        border-color: var(--darker-blue);
+      }
+      &--coconut {
+      border-color: var(--coconut);
+      }
+      &--gold {
+        border-color: var(--gold);
+      }
+      &--night {
+        border-color: var(--night);
+      }  
+    }
+
+    &__heading {
+      font-size: 1.4rem;
+      @extend %card-content;
+      @include respond-large { 
+        font-size: 2rem;
+      }
+
+      &--gold-shadow-border{
+        @include gold-shadow;
+      }
+      &--darker-blue {
+        @include darker-blue;
+      }
+      &--coconut {
+        @include coconut;
+      }
+      &--gold {
+        @include gold;
+      }
+      &--night {
+        @include night;
+      }
+    }
+
+    &__text {
+      @extend %card-content;
+      font-size: 1.2rem;
+
+      @include respond-large { 
+        font-size: 1.6rem;
+      }
+      &--gold-shadow-border{
+        @include gold-shadow;
+      }
+      &--darker-blue {
+        @include darker-blue;
+      }
+      &--coconut {
+        @include coconut;
+      }
+      &--gold {
+        @include gold;
+      }
+      &--night {
+        @include night;
+      }
+    }
+
+    &__button {
+      margin: 3% 25%;
+      padding: 1%;
+      width: 50%;
+      height: max-content;
+      text-align: center;
+      font-size: 1.2rem;
+      font: inherit;
+      cursor: pointer;
+
+      &--gold-shadow-border{
+        @include gold-shadow;
+      }
+      &--fire {
+        background: var(--fire);
+      }
+      &--force {
+        background: var(--noodles);
+      }
+      &--noodles {
+        background: var(--silver);
+      }
+      &--lavendar {
+        background: var(--lavendar);
+      }
+    }
+  }
+
+  
+
+
+  
+
+  
