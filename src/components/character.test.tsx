@@ -39,37 +39,33 @@ const server = setupServer();
   it('displays error message', async () => {
     server.use(
       http.get('https://swapi.dev/api/people/1', () => {
-        return new HttpResponse(JSON.stringify({
+        return new HttpResponse(null, {
           status: 500,
-          statusText: "server error"
-        }), {
           headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'text/plain',
           },
         })
       })
     )
     render(<Character {...requiredProps}/>);
-    //const errorElement = await screen.findByText(/Oops... something went wrong, try again 🤕/i);
-    //expect(errorElement).toBeInTheDocument();
+    const errorElement = await screen.findByText(/Oops... something went wrong, try again 🤕/i);
+    expect(errorElement).toBeInTheDocument();
   });
 
   it('displays error message', async () => {
     server.use(
       http.get('https://swapi.dev/api/people/1', () => {
-        return new HttpResponse(JSON.stringify({
-          status:  418,
-          statusText: "server error"
-        }), {
+        return new HttpResponse(null, {
+          status: 418,
           headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'text/plain',
           },
         })
       })
     )
     render(<Character {...requiredProps}/>);
-    //const errorElement = await screen.findByText(/I'm a tea pot, silly/i);
-    //expect(errorElement).toBeInTheDocument();
+    const errorElement = await screen.findByText(/I'm a tea pot, silly/i);
+    expect(errorElement).toBeInTheDocument();
   });
 
 
