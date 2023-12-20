@@ -18,7 +18,7 @@ const response = useFetch<CharacterProps>(endPoint);
         return (
         <div className = "card card--planet">
         <h2 className = "card__heading card__heading--darker-blue card__heading--gold-shadow-border">
-                {response.data?.name}</h2>
+        {response.error && response.error}{response.data && response.data.name}</h2>
         <img className = "card__image card__image--darker-blue" alt = "Darth Vader holding his fist up" src= 
         {image}></img>
         <p className = "card__text card__text--darker-blue card__text--gold-shadow-border">
