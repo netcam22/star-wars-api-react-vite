@@ -1,4 +1,3 @@
-import React from 'react';
 import './App.scss';
 import { Character } from './components/character';
 import vader from './assets/images/vader.jpeg';
